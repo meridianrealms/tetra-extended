@@ -3,7 +3,7 @@
   "slots": ["sword/blade"],
   "type": "tetra:basic_major_module",
   "improvements": [
-    "tetra:sword/basic_blade/",
+    "tetra:sword/machete/",
     "tetra:sword/shared_blade/",
     "tetra:sword/shared/",
     "tetra:shared/"
@@ -17,21 +17,26 @@
         "tetra:gem/",
         "tetra:bone/"
       ],
-      "key": "basic_blade/",
-      "attributes": { "generic.attack_speed": -1.9 },
-      "effects": { "sweeping": 1 },
+      "key": "machete/",
+      "attributes": { "generic.attack_speed": -1.8 },
+      "aspects": { "edgedWeapon": 2, "blockBreaker": 1, "breakable": 2 },
+      "effects": {
+        "sweeping": [1, 0.5],
+        "strikingCut": 1,
+        "sweepingStrike": 1
+      },
       "tools": { "cut": [1, 2] },
-      "aspects": { "edgedWeapon": 2, "breakable": 2 },
       "durability": -20,
-      "tags": ["forge:swords"],
       "extract": {
         "primaryAttributes": { "generic.attack_damage": 1 },
+        "secondaryAttributes": { "generic.attack_speed": -0.1 },
+        "tools": { "cut": [0, 1.2] },
         "durability": 0.9,
         "integrity": -1,
         "magicCapacity": 1,
-        "glyph": { "textureX": 0 },
+        "glyph": { "textureY": 32, "textureX": 48 },
         "availableTextures": ["metal", "shiny", "grainy", "crude"],
-        "models": [{ "location": "tetra:item/module/sword/blade/basic/" }]
+        "models": [{ "location": "tetra:item/module/sword/blade/machete/" }]
       }
     }
   ]
